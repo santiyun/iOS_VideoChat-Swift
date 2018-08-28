@@ -28,7 +28,7 @@ class TTTAVRegion: UIView {
         let nib = UINib(nibName: "TTTAVRegion", bundle: bundle)
         backgroundView = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
         backgroundView.frame = bounds
-        backgroundView.alpha = 0.9
+        backgroundView.alpha = 0.7
         backgroundView.backgroundColor = UIColor.clear
         addSubview(backgroundView)
     }
@@ -48,6 +48,7 @@ class TTTAVRegion: UIView {
 
 extension TTTAVRegion {
     public func configureRegion(_ user: TTTUser) {
+        backgroundView.alpha = 1
         self.user = user
         voiceBtn.setImage(#imageLiteral(resourceName: "voice_small"), for: .normal)
         idLabel.isHidden = false
@@ -71,6 +72,7 @@ extension TTTAVRegion {
         voiceBtn.isHidden = true
         audioStatsLabel.isHidden = true
         videoStatsLabel.isHidden = true
+        backgroundView.alpha = 0.7
         user = nil
         videoView.image = #imageLiteral(resourceName: "video_head")
     }

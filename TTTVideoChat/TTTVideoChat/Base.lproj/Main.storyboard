@@ -36,11 +36,8 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入房间ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WFI-Ho-RkC">
-                                        <rect key="frame" x="101.66666666666669" y="0.0" width="205" height="33"/>
+                                        <rect key="frame" x="101.66666666666667" y="0.0" width="223.33333333333331" height="33"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="205" id="vk3-mi-A6t"/>
-                                        </constraints>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -55,15 +52,16 @@
                                     <constraint firstItem="WFI-Ho-RkC" firstAttribute="top" secondItem="rUF-ey-rnx" secondAttribute="top" id="MMo-rX-wsW"/>
                                     <constraint firstAttribute="height" constant="33" id="apf-hD-p06"/>
                                     <constraint firstItem="10V-jq-bpn" firstAttribute="leading" secondItem="rUF-ey-rnx" secondAttribute="leading" constant="50" id="kN1-SR-98a"/>
+                                    <constraint firstAttribute="trailing" secondItem="WFI-Ho-RkC" secondAttribute="trailing" constant="50" id="v2Q-HV-MQQ"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wjN-Tp-Y6X">
                                 <rect key="frame" x="50" y="344" width="275" height="40"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.14117647058823529" green="0.71372549019607845" blue="0.792156862745098" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="ylC-Zf-gE4"/>
                                 </constraints>
-                                <state key="normal" title="进入">
+                                <state key="normal" title="进入房间">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -376,7 +374,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Rh-0c-KQn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1564" y="106"/>
+            <point key="canvasLocation" x="894" y="35"/>
         </scene>
     </scenes>
     <resources>
