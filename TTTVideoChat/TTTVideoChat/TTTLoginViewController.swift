@@ -41,14 +41,28 @@ class TTTLoginViewController: UIViewController {
         UserDefaults.standard.synchronize()
         TTProgressHud.showHud(view)
         //TTT SDK
-        TTManager.rtcEngine.delegate = self
-        TTManager.rtcEngine.enableVideo()
-        TTManager.rtcEngine.muteLocalAudioStream(false)
-        TTManager.rtcEngine.setChannelProfile(.channelProfile_Communication)
-        TTManager.rtcEngine.enableAudioVolumeIndication(200, smooth: 3)
+        let rtcEngine = TTManager.rtcEngine
+        rtcEngine?.delegate = self
+        rtcEngine?.setChannelProfile(.channelProfile_Communication)
+        rtcEngine?.enableVideo()
+        rtcEngine?.muteLocalAudioStream(false)
+        rtcEngine?.enableAudioVolumeIndication(200, smooth: 3)
         let swapWH = UIInterfaceOrientationIsPortrait(UIApplication.shared.statusBarOrientation)
-        TTManager.rtcEngine.setVideoProfile(._VideoProfile_360P, swapWidthAndHeight: swapWH)
-        TTManager.rtcEngine.joinChannel(byKey: "", channelName: roomIDTF.text!, uid: uid, joinSuccess: nil)
+        if TTManager.videoCustomProfile.isCustom {//自定义
+            let custom = TTManager.videoCustomProfile
+            var videoSize = custom.videoSize
+            if swapWH {
+                videoSize = CGSize(width: videoSize.height, height: videoSize.width)
+            }
+            rtcEngine?.setVideoProfile(videoSize, frameRate: UInt(custom.fps), bitRate: UInt(custom.bitrate))
+        } else {
+            rtcEngine?.setVideoProfile(TTManager.videoProfile, swapWidthAndHeight: swapWH)
+        }
+        //高音质
+        if TTManager.isHighQualityAudio {
+            rtcEngine?.setHighQualityAudioParametersWithFullband(true, stereo: true, fullBitrate: true)
+        }
+        rtcEngine?.joinChannel(byKey: "", channelName: roomIDTF.text!, uid: uid, joinSuccess: nil)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

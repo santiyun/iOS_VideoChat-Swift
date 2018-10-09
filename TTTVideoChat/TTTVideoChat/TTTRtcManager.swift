@@ -17,6 +17,11 @@ class TTTRtcManager: NSObject {
     public var rtcEngine: TTTRtcEngineKit!
     public var roomID: Int64 = 0
     public var me = TTTUser(0)
+    //高级设置
+    public var isHighQualityAudio = false
+    public var videoProfile = TTTRtcVideoProfile._VideoProfile_Default
+    //自定义
+    public var videoCustomProfile = (isCustom: false, videoSize: CGSize.zero, bitrate: 0, fps: 0)
     private override init() {
         super.init()
         rtcEngine = TTTRtcEngineKit.sharedEngine(withAppId: "a967ac491e3acf92eed5e1b5ba641ab7", delegate: nil)

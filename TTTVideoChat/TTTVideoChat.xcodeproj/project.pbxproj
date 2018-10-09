@@ -26,6 +26,7 @@
 		9B3177312122CBFC003DB8E3 /* TTTUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3177302122CBFC003DB8E3 /* TTTUser.swift */; };
 		9B3177332122CC28003DB8E3 /* TTTAVRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3177322122CC28003DB8E3 /* TTTAVRegion.swift */; };
 		9B3177352122CC30003DB8E3 /* TTTAVRegion.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B3177342122CC30003DB8E3 /* TTTAVRegion.xib */; };
+		9BCB13602147A2EB00DD0724 /* TTTSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCB135F2147A2EB00DD0724 /* TTTSettingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		9B3177302122CBFC003DB8E3 /* TTTUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTTUser.swift; sourceTree = "<group>"; };
 		9B3177322122CC28003DB8E3 /* TTTAVRegion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTTAVRegion.swift; sourceTree = "<group>"; };
 		9B3177342122CC30003DB8E3 /* TTTAVRegion.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TTTAVRegion.xib; sourceTree = "<group>"; };
+		9BCB135F2147A2EB00DD0724 /* TTTSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTTSettingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 		9B3177032122C8B0003DB8E3 /* TTTVideoChat */ = {
 			isa = PBXGroup;
 			children = (
+				9BCB135E2147A2D200DD0724 /* Settings */,
 				9B3177042122C8B0003DB8E3 /* AppDelegate.swift */,
 				9B31772E2122CBDE003DB8E3 /* TTTRtcManager.swift */,
 				9B31772A2122CB6E003DB8E3 /* TTTLoginViewController.swift */,
@@ -126,6 +129,14 @@
 				9B31771E2122CAA5003DB8E3 /* libc++.tbd */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9BCB135E2147A2D200DD0724 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				9BCB135F2147A2EB00DD0724 /* TTTSettingViewController.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,6 +224,7 @@
 				9B3177332122CC28003DB8E3 /* TTTAVRegion.swift in Sources */,
 				9B31772D2122CB85003DB8E3 /* TTTVideoChatViewController.swift in Sources */,
 				9B31772B2122CB6E003DB8E3 /* TTTLoginViewController.swift in Sources */,
+				9BCB13602147A2EB00DD0724 /* TTTSettingViewController.swift in Sources */,
 				9B31772F2122CBDE003DB8E3 /* TTTRtcManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
