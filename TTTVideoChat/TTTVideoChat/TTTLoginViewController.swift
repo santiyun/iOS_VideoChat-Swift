@@ -18,7 +18,7 @@ class TTTLoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let websitePrefix = "http://www.3ttech.cn  version  "
+        let websitePrefix = "http://www.3ttech.cn "
         websiteLabel.text = websitePrefix + TTTRtcEngineKit.getSdkVersion()
         uid = Int64(arc4random() % 100000) + 1
          if let rid = UserDefaults.standard.value(forKey: "ENTERROOMID") as? Int64 {
@@ -47,6 +47,7 @@ class TTTLoginViewController: UIViewController {
         rtcEngine?.enableVideo()
         rtcEngine?.muteLocalAudioStream(false)
         rtcEngine?.enableAudioVolumeIndication(200, smooth: 3)
+//        rtcEngine?.setServerIp("123.126.114.235", port: 25000)
         let swapWH = UIInterfaceOrientationIsPortrait(UIApplication.shared.statusBarOrientation)
         if TTManager.videoCustomProfile.isCustom {//自定义
             let custom = TTManager.videoCustomProfile

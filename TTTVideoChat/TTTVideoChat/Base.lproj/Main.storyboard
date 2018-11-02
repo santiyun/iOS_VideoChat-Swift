@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -74,19 +72,19 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="http://www.3ttech.cn  version  2.0.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pm7-Bw-m6K">
-                                <rect key="frame" x="72.666666666666686" y="731" width="230" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <rect key="frame" x="87.000000000000014" y="733.66666666666663" width="201.33333333333337" height="14.333333333333371"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="视频通话" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6rt-vk-2o0">
-                                <rect key="frame" x="159" y="684" width="57.666666666666657" height="17"/>
+                                <rect key="frame" x="158.66666666666666" y="686.66666666666663" width="57.666666666666657" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z0n-Zi-2dW">
-                                <rect key="frame" x="156.66666666666666" y="634" width="62" height="30"/>
+                                <rect key="frame" x="156.66666666666666" y="636.66666666666663" width="62" height="30"/>
                                 <state key="normal" title="高级设置">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -149,10 +147,10 @@
                                 <rect key="frame" x="0.0" y="444.66666666666674" width="375" height="333.33333333333326"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hAx-Ia-LF4">
-                                        <rect key="frame" x="0.0" y="-0.66666666666668561" width="375" height="333.66666666666669"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="332.33333333333331"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wYP-oi-0dZ">
-                                                <rect key="frame" x="0.0" y="166.66666666666663" width="375" height="1"/>
+                                                <rect key="frame" x="0.0" y="165.66666666666669" width="375" height="1"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="Ukt-B1-jK7"/>
                                                 </constraints>
@@ -161,27 +159,27 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WGs-2I-xaI" customClass="TTTAVRegion" customModule="TTTVideoChat" customModuleProvider="target">
-                                                <rect key="frame" x="2" y="0.0" width="123" height="166.66666666666666"/>
+                                                <rect key="frame" x="2" y="0.0" width="123" height="165.66666666666666"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cbh-uk-W3s" customClass="TTTAVRegion" customModule="TTTVideoChat" customModuleProvider="target">
-                                                <rect key="frame" x="126" y="0.0" width="123" height="166.66666666666666"/>
+                                                <rect key="frame" x="126" y="0.0" width="123" height="165.66666666666666"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OYq-gG-hGR" customClass="TTTAVRegion" customModule="TTTVideoChat" customModuleProvider="target">
-                                                <rect key="frame" x="250" y="0.0" width="123" height="166.66666666666666"/>
+                                                <rect key="frame" x="250" y="0.0" width="123" height="165.66666666666666"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5yK-cM-uBq" customClass="TTTAVRegion" customModule="TTTVideoChat" customModuleProvider="target">
-                                                <rect key="frame" x="2" y="167.66666666666663" width="123" height="166"/>
+                                                <rect key="frame" x="2" y="166.66666666666669" width="123" height="165.66666666666669"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="czP-h3-eNs" customClass="TTTAVRegion" customModule="TTTVideoChat" customModuleProvider="target">
-                                                <rect key="frame" x="126" y="167" width="123" height="166"/>
+                                                <rect key="frame" x="126" y="166.66666666666669" width="123" height="165.66666666666669"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nSl-Nl-BKb" customClass="TTTAVRegion" customModule="TTTVideoChat" customModuleProvider="target">
-                                                <rect key="frame" x="250" y="167.66666666666663" width="123" height="166"/>
+                                                <rect key="frame" x="250" y="166.66666666666669" width="123" height="165.66666666666669"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
                                         </subviews>
@@ -235,7 +233,7 @@
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="top_background" translatesAutoresizingMaskIntoConstraints="NO" id="VVR-jw-9Pd">
-                                        <rect key="frame" x="0.0" y="166.99999999999994" width="375" height="41.666666666666657"/>
+                                        <rect key="frame" x="0.0" y="167.33333333333331" width="375" height="41.666666666666657"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="VVR-jw-9Pd" secondAttribute="height" multiplier="9:1" id="FhI-iX-pwK"/>
                                         </constraints>
@@ -746,14 +744,14 @@
     </scenes>
     <resources>
         <image name="back" width="30" height="30"/>
-        <image name="bottom_background" width="375" height="41"/>
+        <image name="bottom_background" width="375" height="41.666667938232422"/>
         <image name="exit" width="23" height="24"/>
         <image name="launch" width="375" height="667"/>
         <image name="logo" width="142" height="27"/>
         <image name="show_more" width="30" height="30"/>
-        <image name="switch" width="35" height="35"/>
-        <image name="top_background" width="375" height="71"/>
-        <image name="video_head" width="120" height="135"/>
+        <image name="switch" width="35" height="35.666667938232422"/>
+        <image name="top_background" width="375" height="71.666664123535156"/>
+        <image name="video_head" width="120" height="135.66667175292969"/>
         <image name="voice_small" width="35" height="35"/>
     </resources>
 </document>

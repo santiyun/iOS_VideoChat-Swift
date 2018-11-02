@@ -26,6 +26,7 @@
 		9B3177312122CBFC003DB8E3 /* TTTUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3177302122CBFC003DB8E3 /* TTTUser.swift */; };
 		9B3177332122CC28003DB8E3 /* TTTAVRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3177322122CC28003DB8E3 /* TTTAVRegion.swift */; };
 		9B3177352122CC30003DB8E3 /* TTTAVRegion.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B3177342122CC30003DB8E3 /* TTTAVRegion.xib */; };
+		9B5D0216216EF1250035DD6A /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B5D0215216EF1250035DD6A /* libiconv.tbd */; };
 		9BCB13602147A2EB00DD0724 /* TTTSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCB135F2147A2EB00DD0724 /* TTTSettingViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		9B3177302122CBFC003DB8E3 /* TTTUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTTUser.swift; sourceTree = "<group>"; };
 		9B3177322122CC28003DB8E3 /* TTTAVRegion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTTAVRegion.swift; sourceTree = "<group>"; };
 		9B3177342122CC30003DB8E3 /* TTTAVRegion.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TTTAVRegion.xib; sourceTree = "<group>"; };
+		9B5D0215216EF1250035DD6A /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 		9BCB135F2147A2EB00DD0724 /* TTTSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTTSettingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -59,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B5D0216216EF1250035DD6A /* libiconv.tbd in Frameworks */,
 				9B3177292122CAF5003DB8E3 /* ReplayKit.framework in Frameworks */,
 				9B3177272122CAE2003DB8E3 /* CoreTelephony.framework in Frameworks */,
 				9B3177252122CADB003DB8E3 /* SystemConfiguration.framework in Frameworks */,
@@ -121,6 +124,7 @@
 		9B31771D2122CAA4003DB8E3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9B5D0215216EF1250035DD6A /* libiconv.tbd */,
 				9B3177282122CAF5003DB8E3 /* ReplayKit.framework */,
 				9B3177262122CAE2003DB8E3 /* CoreTelephony.framework */,
 				9B3177242122CADB003DB8E3 /* SystemConfiguration.framework */,
