@@ -64,7 +64,7 @@ extension TTTVideoChatViewController: TTTRtcEngineDelegate {
     func rtcEngine(_ engine: TTTRtcEngineKit!, didJoinedOfUid uid: Int64, clientRole: TTTRtcClientRole, isVideoEnabled: Bool, elapsed: Int) {
         let user = TTTUser(uid)
         users.append(user)
-        getAvaiableAVRegion()?.configureRegion(user)
+        getAVRegion()?.configureRegion(user)
     }
     
     func rtcEngine(_ engine: TTTRtcEngineKit!, didOfflineOfUid uid: Int64, reason: TTTRtcUserOfflineReason) {
@@ -113,10 +113,19 @@ extension TTTVideoChatViewController: TTTRtcEngineDelegate {
     }
     
     func rtcEngineConnectionDidLost(_ engine: TTTRtcEngineKit!) {
-        view.window?.showToast("ConnectionDidLost")
+        TTProgressHud.showHud(view, message: "网络链接丢失，正在重连...", color: nil)
+    }
+    
+    func rtcEngineReconnectServerTimeout(_ engine: TTTRtcEngineKit!) {
+        TTProgressHud.hideHud(for: view)
+        view.window?.showToast("网络丢失，请检查网络")
         engine.leaveChannel(nil)
         engine.stopPreview()
         dismiss(animated: true, completion: nil)
+    }
+    
+    func rtcEngineReconnectServerSucceed(_ engine: TTTRtcEngineKit!) {
+        TTProgressHud.hideHud(for: view)
     }
     
     func rtcEngine(_ engine: TTTRtcEngineKit!, didKickedOutOfUid uid: Int64, reason: TTTRtcKickedOutReason) {
@@ -146,11 +155,7 @@ extension TTTVideoChatViewController: TTTRtcEngineDelegate {
 }
 
 private extension TTTVideoChatViewController {
-    func getAvaiableAVRegion() -> TTTAVRegion? {
-        return avRegions.first { $0.user == nil }
-    }
-    
-    func getAVRegion(_ uid: Int64) -> TTTAVRegion? {
+    func getAVRegion(_ uid: Int64? = nil) -> TTTAVRegion? {
         return avRegions.first { $0.user?.uid == uid }
     }
     
