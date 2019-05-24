@@ -52,8 +52,10 @@ class TTTVideoChatViewController: UIViewController {
     @IBAction func exitChannel(_ sender: Any) {
         let alert = UIAlertController(title: "提示", message: "你确定要退出房间吗？", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "取消", style: .cancel, handler: nil))
-        let sureAction = UIAlertAction(title: "确定", style: .default) { (action) in
+        let sureAction = UIAlertAction(title: "确定", style: .default) { [weak self] (action) in
             TTManager.rtcEngine.leaveChannel(nil)
+            TTManager.rtcEngine.stopPreview()
+            self?.dismiss(animated: true, completion: nil)
         }
         alert.addAction(sureAction)
         present(alert, animated: true, completion: nil)
@@ -107,11 +109,6 @@ extension TTTVideoChatViewController: TTTRtcEngineDelegate {
         //解码远端用户第一帧
     }
     
-    func rtcEngine(_ engine: TTTRtcEngineKit!, didLeaveChannelWith stats: TTTRtcStats!) {
-        engine.stopPreview()
-        dismiss(animated: true, completion: nil)
-    }
-    
     func rtcEngineConnectionDidLost(_ engine: TTTRtcEngineKit!) {
         TTProgressHud.showHud(view, message: "网络链接丢失，正在重连...", color: nil)
     }
@@ -131,26 +128,21 @@ extension TTTVideoChatViewController: TTTRtcEngineDelegate {
     func rtcEngine(_ engine: TTTRtcEngineKit!, didKickedOutOfUid uid: Int64, reason: TTTRtcKickedOutReason) {
         var errorInfo = ""
         switch reason {
-        case .kickedOut_KickedByHost:
-            errorInfo = "被主播踢出"
-        case .kickedOut_PushRtmpFailed:
-            errorInfo = "rtmp推流失败"
-        case .kickedOut_MasterExit:
-            errorInfo = "主播已退出"
         case .kickedOut_ReLogin:
             errorInfo = "重复登录"
         case .kickedOut_NoAudioData:
             errorInfo = "长时间没有上行音频数据"
         case .kickedOut_NoVideoData:
             errorInfo = "长时间没有上行视频数据"
-        case .kickedOut_NewChairEnter:
-            errorInfo = "其他人以主播身份进入"
         case .kickedOut_ChannelKeyExpired:
             errorInfo = "Channel Key失效"
         default:
             errorInfo = "未知错误"
         }
         view.window?.showToast(errorInfo)
+        engine.leaveChannel(nil)
+        engine.stopPreview()
+        dismiss(animated: true, completion: nil)
     }
 }
 

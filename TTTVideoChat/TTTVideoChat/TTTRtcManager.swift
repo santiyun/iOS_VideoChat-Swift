@@ -24,7 +24,7 @@ class TTTRtcManager: NSObject {
     public var videoCustomProfile = (isCustom: false, videoSize: CGSize.zero, bitrate: 0, fps: 0)
     private override init() {
         super.init()
-        let appId = <#name#>
-        rtcEngine = TTTRtcEngineKit.sharedEngine(withAppId: appId, delegate: nil)
+        //set AppId
+        rtcEngine = TTTRtcEngineKit.sharedEngine(withAppId: <#name#>, delegate: nil)
     }
 }

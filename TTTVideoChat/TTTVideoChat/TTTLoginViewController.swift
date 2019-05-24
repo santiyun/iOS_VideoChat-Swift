@@ -61,7 +61,7 @@ class TTTLoginViewController: UIViewController {
         }
         //高音质
         if TTManager.isHighQualityAudio {
-            rtcEngine?.setHighQualityAudioParametersWithFullband(true, stereo: true, fullBitrate: true)
+            rtcEngine?.setPrefer(.audioCodec_AAC, bitrate: 96, channels: 1)
         }
         rtcEngine?.joinChannel(byKey: "", channelName: roomIDTF.text!, uid: uid, joinSuccess: nil)
     }
